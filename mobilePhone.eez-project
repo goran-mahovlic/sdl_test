@@ -6,15 +6,18 @@
       "objID": "fd434352-2277-c4a8-e87e-e96cfcbf2305",
       "projectVersion": "v3",
       "projectType": "firmware",
+      "extensions": [],
       "imports": [],
       "flowSupport": true,
-      "displayWidth": 480,
-      "displayHeight": 272,
+      "displayWidth": 960,
+      "displayHeight": 540,
+      "colorFormat": "RGB",
       "description": "EEZ-GUI project template for the SDL",
       "keywords": "SDL",
       "targetPlatform": "Simple DirectMedia Layer is a cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D. It is used by video playback software, emulators, and popular games including Valve's award winning catalog and many Humble Bundle games.\n\nSDL officially supports Windows, macOS, Linux, iOS, and Android. Support for other platforms may be found in the source code.\n\nSDL is written in C, works natively with C++, and there are bindings available for several other languages, including C# and Python.\n\nSDL 2.0 is distributed under the zlib license. This license allows you to use SDL freely in any software.",
       "targetPlatformLink": "https://www.libsdl.org/",
-      "resourceFiles": []
+      "resourceFiles": [],
+      "commandsProtocol": "SCPI"
     },
     "build": {
       "objID": "72794a43-a0fc-13c2-7eb5-67dd952141a4",
@@ -112,19 +115,72 @@
         {
           "objID": "1a331409-37d5-13ac-651e-26eb227b18b1",
           "type": "TextWidget",
-          "left": 0,
-          "top": 114,
+          "left": 241,
+          "top": 19,
           "width": 480,
           "height": 44,
           "customInputs": [],
           "customOutputs": [],
-          "data": "\"Hello, world!\"",
+          "data": "\"Linux SLD2 APP!\"",
           "style": {
             "objID": "759e70f7-0da0-ee89-4fb3-c9fe64b200c5",
-            "inheritFrom": "default"
+            "useStyle": "default",
+            "conditionalStyles": [],
+            "childStyles": []
           },
           "timeline": [],
-          "eventHandlers": []
+          "eventHandlers": [],
+          "focusStyle": {
+            "objID": "1809b9e5-7d40-01d5-cfaa-3a6763f22a1b",
+            "useStyle": "default",
+            "conditionalStyles": [],
+            "childStyles": []
+          }
+        },
+        {
+          "objID": "4b8885af-6840-4eb9-b2e7-bcf61738f789",
+          "type": "TextWidget",
+          "left": 241,
+          "top": 465,
+          "width": 480,
+          "height": 44,
+          "customInputs": [],
+          "customOutputs": [],
+          "data": "\"Created with Envox EEZ Studio\"",
+          "style": {
+            "objID": "6489d347-be50-4b29-833c-e55f04931888",
+            "useStyle": "default",
+            "conditionalStyles": [],
+            "childStyles": []
+          },
+          "timeline": [],
+          "eventHandlers": [],
+          "focusStyle": {
+            "objID": "bf84bae0-4d3f-479f-f896-93818d1674a2",
+            "useStyle": "default",
+            "conditionalStyles": [],
+            "childStyles": []
+          }
+        },
+        {
+          "objID": "1800c5e3-15ce-4712-84af-50fe45524262",
+          "type": "QRCodeWidget",
+          "left": 247,
+          "top": 75,
+          "width": 467,
+          "height": 390,
+          "customInputs": [],
+          "customOutputs": [],
+          "data": "\"DORS/CLUC 2024\"",
+          "style": {
+            "objID": "9496e9ed-f798-4da3-dfe6-0fc5447cd903",
+            "useStyle": "default",
+            "conditionalStyles": [],
+            "childStyles": []
+          },
+          "timeline": [],
+          "eventHandlers": [],
+          "errorCorrection": "medium"
         }
       ],
       "connectionLines": [],
@@ -133,8 +189,8 @@
       "style": "background",
       "left": 0,
       "top": 0,
-      "width": 480,
-      "height": 272,
+      "width": 960,
+      "height": 540,
       "lvglLocalStyles": {
         "objID": "1b4d3944-2a33-2556-6e3f-c1c1bb594fb7"
       }
@@ -147,7 +203,259 @@
       "id": 1,
       "name": "default",
       "description": "",
-      "inheritFrom": "",
+      "conditionalStyles": [],
+      "childStyles": [
+        {
+          "objID": "d9630995-549b-27a2-06c2-a2794496b85a",
+          "id": 2,
+          "name": "info_alert",
+          "conditionalStyles": [],
+          "childStyles": [],
+          "alwaysBuild": true,
+          "padding": "20",
+          "margin": "20"
+        },
+        {
+          "objID": "596e02a3-c281-63d5-74de-a9f10915ecad",
+          "id": 3,
+          "name": "error_alert",
+          "conditionalStyles": [],
+          "childStyles": [],
+          "alwaysBuild": true,
+          "color": "dark_text",
+          "backgroundColor": "error",
+          "activeColor": "error",
+          "activeBackgroundColor": "dark_text",
+          "padding": "20",
+          "margin": "20"
+        },
+        {
+          "objID": "99524f6d-f187-67b3-070c-f68da187ac56",
+          "id": 5,
+          "name": "select_enum_item_popup_container",
+          "conditionalStyles": [],
+          "childStyles": [
+            {
+              "objID": "451ff6d3-0da3-8dd3-54cc-5630b8a68c1f",
+              "id": 6,
+              "name": "select_enum_item_popup_container_S",
+              "conditionalStyles": [],
+              "childStyles": [
+                {
+                  "objID": "eccd5f27-3959-bf9b-36e6-401768a0cbd2",
+                  "id": 8,
+                  "name": "select_enum_item_popup_item_S",
+                  "conditionalStyles": [],
+                  "childStyles": [
+                    {
+                      "objID": "32fc2d2f-db93-8b71-6883-195f498d5977",
+                      "id": 10,
+                      "name": "select_enum_item_popup_disabled_item_S",
+                      "conditionalStyles": [],
+                      "childStyles": [],
+                      "alwaysBuild": true,
+                      "color": "drop_down_list_color_disabled"
+                    }
+                  ],
+                  "alwaysBuild": true,
+                  "alignHorizontal": "left",
+                  "padding": "6"
+                }
+              ],
+              "alwaysBuild": true
+            },
+            {
+              "objID": "0d0344fa-33c2-0b11-7d16-e298ad85df1a",
+              "id": 7,
+              "name": "select_enum_item_popup_item",
+              "conditionalStyles": [],
+              "childStyles": [
+                {
+                  "objID": "15c183e7-e541-10d2-dc96-701adca53473",
+                  "id": 9,
+                  "name": "select_enum_item_popup_disabled_item",
+                  "conditionalStyles": [],
+                  "childStyles": [],
+                  "alwaysBuild": true,
+                  "color": "drop_down_list_color_disabled"
+                }
+              ],
+              "alwaysBuild": true,
+              "padding": "6"
+            }
+          ],
+          "alwaysBuild": true,
+          "color": "drop_down_list_color",
+          "backgroundColor": "drop_down_list_background",
+          "activeColor": "drop_down_list_background",
+          "activeBackgroundColor": "drop_down_list_color",
+          "padding": "12"
+        },
+        {
+          "objID": "896bb373-355d-40b9-8386-4332390ce115",
+          "id": 11,
+          "name": "menu_with_buttons_message",
+          "conditionalStyles": [],
+          "childStyles": [],
+          "alwaysBuild": true,
+          "alignVertical": "top",
+          "color": "text",
+          "backgroundColor": "background",
+          "activeColor": "background",
+          "activeBackgroundColor": "text",
+          "padding": "0 0 10 0",
+          "margin": "0"
+        },
+        {
+          "objID": "c8203187-878b-1452-d8ff-9425dede499b",
+          "id": 12,
+          "name": "menu_with_buttons_container",
+          "conditionalStyles": [],
+          "childStyles": [],
+          "alwaysBuild": true,
+          "padding": "20",
+          "margin": "20"
+        },
+        {
+          "objID": "b250a172-d01b-d54f-3d84-891f3c6c48ab",
+          "id": 14,
+          "name": "fps_graph",
+          "conditionalStyles": [],
+          "childStyles": [],
+          "alwaysBuild": true,
+          "color": "#00ff1e",
+          "backgroundColor": "#000000",
+          "borderSize": "1",
+          "borderColor": "backdrop"
+        },
+        {
+          "objID": "196d3137-46d6-a552-f1bc-80c98098e3ce",
+          "id": 15,
+          "name": "slider_widget",
+          "conditionalStyles": [],
+          "childStyles": [],
+          "color": "slider_widget_color",
+          "backgroundColor": "slider_widget_background"
+        },
+        {
+          "objID": "4d239458-1686-00b4-e6d6-551070c8e0c6",
+          "id": 16,
+          "name": "switch_widget",
+          "conditionalStyles": [],
+          "childStyles": [],
+          "color": "switch_widget_color",
+          "backgroundColor": "switch_widget_background_off",
+          "activeColor": "switch_widget_color",
+          "activeBackgroundColor": "switch_widget_background_on",
+          "focusColor": "switch_widget_color",
+          "borderSize": "2",
+          "borderColor": "switch_widget_border",
+          "padding": "3 0"
+        },
+        {
+          "objID": "b1aa1e30-6a2d-4fe1-8880-b4fecf686ed2",
+          "id": 17,
+          "name": "background",
+          "conditionalStyles": [],
+          "childStyles": [],
+          "backgroundColor": "background",
+          "backgroundImage": ""
+        },
+        {
+          "objID": "07d83b2f-14da-b1c3-ea6e-d277fb3355be",
+          "id": 18,
+          "name": "button",
+          "conditionalStyles": [],
+          "childStyles": [
+            {
+              "objID": "47f65ab6-cfa3-09b2-b3b4-4260adc98ef5",
+              "id": 4,
+              "name": "error_alert_button",
+              "conditionalStyles": [],
+              "childStyles": [],
+              "alwaysBuild": true,
+              "padding": "8 16 8 16"
+            },
+            {
+              "objID": "85f44e5f-3da1-407e-57a2-aee66a4c68aa",
+              "id": 13,
+              "name": "menu_with_buttons_button",
+              "conditionalStyles": [],
+              "childStyles": [],
+              "alwaysBuild": true,
+              "padding": "0 4",
+              "margin": "0"
+            },
+            {
+              "objID": "fa680b00-5a77-f63a-7aad-b774279a1c8c",
+              "id": 19,
+              "name": "button_disabled",
+              "conditionalStyles": [],
+              "childStyles": [],
+              "color": "button_disabled_text",
+              "backgroundColor": "button_disabled_background",
+              "activeColor": "button_disabled_text",
+              "activeBackgroundColor": "button_disabled_background",
+              "borderColor": "button_disabled_border"
+            }
+          ],
+          "color": "button_text",
+          "backgroundColor": "button_background",
+          "activeColor": "button_text",
+          "activeBackgroundColor": "button_active_background",
+          "borderSize": "2",
+          "borderRadius": "8",
+          "borderColor": "button_border"
+        },
+        {
+          "objID": "00947574-0f82-d1c9-419a-ee1680384ec4",
+          "id": 20,
+          "name": "note_M",
+          "conditionalStyles": [],
+          "childStyles": [],
+          "color": "dark_text",
+          "backgroundColor": "note"
+        },
+        {
+          "objID": "54647aad-d4fe-9b42-6da6-1bb8452131c0",
+          "id": 21,
+          "name": "drop_down_list",
+          "conditionalStyles": [],
+          "childStyles": [],
+          "color": "drop_down_list_color",
+          "backgroundColor": "drop_down_list_background",
+          "activeColor": "drop_down_list_color",
+          "activeBackgroundColor": "drop_down_list_active_background",
+          "borderSize": "2",
+          "borderRadius": "8",
+          "borderColor": "drop_down_list_border"
+        },
+        {
+          "objID": "72d784b2-e693-7b06-cc0d-18e32a5ccd25",
+          "id": 22,
+          "name": "roller_widget",
+          "conditionalStyles": [],
+          "childStyles": []
+        },
+        {
+          "objID": "2dccf1f1-b94e-8c75-87b8-e7fd053491d7",
+          "id": 23,
+          "name": "roller_widget_selected_value",
+          "conditionalStyles": [],
+          "childStyles": [],
+          "borderSize": "2",
+          "borderRadius": "4",
+          "borderColor": "#c0c0c0"
+        },
+        {
+          "objID": "4a89fd1f-824b-fb95-1575-dfe95862c657",
+          "id": 24,
+          "name": "roller_widget_unselected_value",
+          "conditionalStyles": [],
+          "childStyles": [],
+          "color": "#808080"
+        }
+      ],
       "font": "medium",
       "alignHorizontal": "center",
       "alignVertical": "center",
@@ -157,228 +465,6 @@
       "activeBackgroundColor": "text",
       "borderColor": "border",
       "padding": "0"
-    },
-    {
-      "objID": "d9630995-549b-27a2-06c2-a2794496b85a",
-      "id": 2,
-      "name": "info_alert",
-      "inheritFrom": "default",
-      "alwaysBuild": true,
-      "padding": "20",
-      "margin": "20"
-    },
-    {
-      "objID": "596e02a3-c281-63d5-74de-a9f10915ecad",
-      "id": 3,
-      "name": "error_alert",
-      "inheritFrom": "default",
-      "alwaysBuild": true,
-      "color": "dark_text",
-      "backgroundColor": "error",
-      "activeColor": "error",
-      "activeBackgroundColor": "dark_text",
-      "padding": "20",
-      "margin": "20"
-    },
-    {
-      "objID": "47f65ab6-cfa3-09b2-b3b4-4260adc98ef5",
-      "id": 4,
-      "name": "error_alert_button",
-      "inheritFrom": "button",
-      "alwaysBuild": true,
-      "padding": "8 16 8 16"
-    },
-    {
-      "objID": "99524f6d-f187-67b3-070c-f68da187ac56",
-      "id": 5,
-      "name": "select_enum_item_popup_container",
-      "inheritFrom": "default",
-      "alwaysBuild": true,
-      "color": "drop_down_list_color",
-      "backgroundColor": "drop_down_list_background",
-      "activeColor": "drop_down_list_background",
-      "activeBackgroundColor": "drop_down_list_color",
-      "padding": "12"
-    },
-    {
-      "objID": "451ff6d3-0da3-8dd3-54cc-5630b8a68c1f",
-      "id": 6,
-      "name": "select_enum_item_popup_container_S",
-      "inheritFrom": "select_enum_item_popup_container",
-      "alwaysBuild": true
-    },
-    {
-      "objID": "0d0344fa-33c2-0b11-7d16-e298ad85df1a",
-      "id": 7,
-      "name": "select_enum_item_popup_item",
-      "inheritFrom": "select_enum_item_popup_container",
-      "alwaysBuild": true,
-      "padding": "6"
-    },
-    {
-      "objID": "eccd5f27-3959-bf9b-36e6-401768a0cbd2",
-      "id": 8,
-      "name": "select_enum_item_popup_item_S",
-      "inheritFrom": "select_enum_item_popup_container_S",
-      "alwaysBuild": true,
-      "alignHorizontal": "left",
-      "padding": "6"
-    },
-    {
-      "objID": "15c183e7-e541-10d2-dc96-701adca53473",
-      "id": 9,
-      "name": "select_enum_item_popup_disabled_item",
-      "inheritFrom": "select_enum_item_popup_item",
-      "alwaysBuild": true,
-      "color": "drop_down_list_color_disabled"
-    },
-    {
-      "objID": "32fc2d2f-db93-8b71-6883-195f498d5977",
-      "id": 10,
-      "name": "select_enum_item_popup_disabled_item_S",
-      "inheritFrom": "select_enum_item_popup_item_S",
-      "alwaysBuild": true,
-      "color": "drop_down_list_color_disabled"
-    },
-    {
-      "objID": "896bb373-355d-40b9-8386-4332390ce115",
-      "id": 11,
-      "name": "menu_with_buttons_message",
-      "inheritFrom": "default",
-      "alwaysBuild": true,
-      "alignVertical": "top",
-      "color": "text",
-      "backgroundColor": "background",
-      "activeColor": "background",
-      "activeBackgroundColor": "text",
-      "padding": "0 0 10 0",
-      "margin": "0"
-    },
-    {
-      "objID": "c8203187-878b-1452-d8ff-9425dede499b",
-      "id": 12,
-      "name": "menu_with_buttons_container",
-      "inheritFrom": "default",
-      "alwaysBuild": true,
-      "padding": "20",
-      "margin": "20"
-    },
-    {
-      "objID": "85f44e5f-3da1-407e-57a2-aee66a4c68aa",
-      "id": 13,
-      "name": "menu_with_buttons_button",
-      "inheritFrom": "button",
-      "alwaysBuild": true,
-      "padding": "0 4",
-      "margin": "0"
-    },
-    {
-      "objID": "b250a172-d01b-d54f-3d84-891f3c6c48ab",
-      "id": 14,
-      "name": "fps_graph",
-      "inheritFrom": "default",
-      "alwaysBuild": true,
-      "color": "#00ff1e",
-      "backgroundColor": "#000000",
-      "borderSize": "1",
-      "borderColor": "backdrop"
-    },
-    {
-      "objID": "196d3137-46d6-a552-f1bc-80c98098e3ce",
-      "id": 15,
-      "name": "slider_widget",
-      "inheritFrom": "default",
-      "color": "slider_widget_color",
-      "backgroundColor": "slider_widget_background"
-    },
-    {
-      "objID": "4d239458-1686-00b4-e6d6-551070c8e0c6",
-      "id": 16,
-      "name": "switch_widget",
-      "inheritFrom": "default",
-      "color": "switch_widget_color",
-      "backgroundColor": "switch_widget_background_off",
-      "activeColor": "switch_widget_color",
-      "activeBackgroundColor": "switch_widget_background_on",
-      "focusColor": "switch_widget_color",
-      "borderSize": "2",
-      "borderColor": "switch_widget_border",
-      "padding": "3 0"
-    },
-    {
-      "objID": "b1aa1e30-6a2d-4fe1-8880-b4fecf686ed2",
-      "id": 17,
-      "name": "background",
-      "inheritFrom": "default",
-      "backgroundColor": "background",
-      "backgroundImage": ""
-    },
-    {
-      "objID": "07d83b2f-14da-b1c3-ea6e-d277fb3355be",
-      "id": 18,
-      "name": "button",
-      "inheritFrom": "default",
-      "color": "button_text",
-      "backgroundColor": "button_background",
-      "activeColor": "button_text",
-      "activeBackgroundColor": "button_active_background",
-      "borderSize": "2",
-      "borderRadius": "8",
-      "borderColor": "button_border"
-    },
-    {
-      "objID": "fa680b00-5a77-f63a-7aad-b774279a1c8c",
-      "id": 19,
-      "name": "button_disabled",
-      "inheritFrom": "button",
-      "color": "button_disabled_text",
-      "backgroundColor": "button_disabled_background",
-      "activeColor": "button_disabled_text",
-      "activeBackgroundColor": "button_disabled_background",
-      "borderColor": "button_disabled_border"
-    },
-    {
-      "objID": "00947574-0f82-d1c9-419a-ee1680384ec4",
-      "id": 20,
-      "name": "note_M",
-      "inheritFrom": "default",
-      "color": "dark_text",
-      "backgroundColor": "note"
-    },
-    {
-      "objID": "54647aad-d4fe-9b42-6da6-1bb8452131c0",
-      "id": 21,
-      "name": "drop_down_list",
-      "inheritFrom": "default",
-      "color": "drop_down_list_color",
-      "backgroundColor": "drop_down_list_background",
-      "activeColor": "drop_down_list_color",
-      "activeBackgroundColor": "drop_down_list_active_background",
-      "borderSize": "2",
-      "borderRadius": "8",
-      "borderColor": "drop_down_list_border"
-    },
-    {
-      "objID": "72d784b2-e693-7b06-cc0d-18e32a5ccd25",
-      "id": 22,
-      "name": "roller_widget",
-      "inheritFrom": "default"
-    },
-    {
-      "objID": "2dccf1f1-b94e-8c75-87b8-e7fd053491d7",
-      "id": 23,
-      "name": "roller_widget_selected_value",
-      "inheritFrom": "default",
-      "borderSize": "2",
-      "borderRadius": "4",
-      "borderColor": "#c0c0c0"
-    },
-    {
-      "objID": "4a89fd1f-824b-fb95-1575-dfe95862c657",
-      "id": 24,
-      "name": "roller_widget_unselected_value",
-      "inheritFrom": "default",
-      "color": "#808080"
     }
   ],
   "fonts": [
